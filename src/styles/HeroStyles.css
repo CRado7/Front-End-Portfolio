@@ -1,0 +1,25 @@
+.hero-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.full-about {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: clamp(320px, 100%, 900px);
+    text-align: left;
+    margin: 20px auto;
+  }
+
+  .full-about img {
+    height: 100px;
+    width: 100px;
+    margin: 0 0 10px 0;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }

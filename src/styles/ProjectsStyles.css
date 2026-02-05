@@ -1,0 +1,140 @@
+/* styles/Projects.css */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .project-card {
+    position: relative;
+    aspect-ratio: 1/1;
+    /* background: #111; */
+    /* border-radius: 12px; */
+    cursor: pointer;
+    overflow: hidden;
+    transition: all ease-in-out .3s;
+
+    &:hover {
+      box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.05);
+    }
+  }
+  
+  .project-card-overlay {
+    position: absolute;
+    inset: 0;
+    /* background: rgba(0, 0, 0, 0.65); */
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .project-card:hover .project-card-overlay {
+    opacity: 1;
+  }
+  
+  .project-card h3 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  
+  .project-card .role {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .project-card .stack {
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+  
+  /* Modal */
+  
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: #46464647;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-backdrop p, .modal-backdrop ul li {
+    text-align: left;
+  }
+
+  .modal-backdrop li {
+    margin-bottom: 15px;
+  }
+  
+  .modal-container {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-height: 100dvh;
+  }
+  
+  .modal-section {
+    background: #f3f3f3;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.05);
+  }
+  
+  .modal-section h4 {
+    margin-top: 0;
+  }
+
+  aside.stretch {
+    align-items: stretch;
+    flex: 1 1 25%;
+    min-width: 320px;
+  }
+
+  p.stack {
+    text-align: center !important;
+    font-style: italic;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 24px;
+    flex: 1 1 70%;
+  }
+
+  main section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+  }
+
+  main section .modal-section {
+    flex: 1 1 30%;
+    min-width: 320px;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
