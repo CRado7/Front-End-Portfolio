@@ -1,0 +1,36 @@
+nav, footer {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: right;
+    gap: 24px;
+    padding: 16px;
+}
+
+nav a, footer a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    position: relative;
+}
+
+nav {
+    position: sticky;
+    left: 0l;
+    top: 0;
+    background: linear-gradient(to bottom, #f3f3f3, rgba(243, 243, 243, 0));
+    z-index: 10;
+}
+
+footer {
+    position: relative;
+}
+
+@media (max-width: 500px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
