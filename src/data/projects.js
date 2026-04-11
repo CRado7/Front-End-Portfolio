@@ -5,11 +5,8 @@ import Reia from "../assets/Reia-Thumb.png"
 import TPS from "../assets/InkHive-Thumb.png"
 import TOO from "../assets/Outpost-Thumb.png"
 import RRFC from "../assets/Rifles-Thumb.png"
-  import BOD from "../assets/rifles/Board of Directors.png"
   import HOME from "../assets/rifles/Home.png"
   import HOMENEW from "../assets/rifles/Home-New.png"
-  import SCHEDULE from "../assets/rifles/Schedule.png"
-  import SPONSORS from "../assets/rifles/Sponsors.png"
 
 export const projects = [
   {
@@ -256,8 +253,8 @@ export const projects = [
         timeline: "Ongoing",
         scope:
           "Redesigned and rebuilt the website from a Google Site to a fully custom, responsive platform with content management via Google Sheets, automated email workflows, and front-end improvements. Ensured volunteers could update schedules, events, and rosters without technical knowledge. This site is currently hosted on render as a staging environment while we finalize content and features before launch.",
-        siteStatus: "Live / Ongoing support",
-        statusColor: "green",
+        siteStatus: "In Development / Staging",
+        statusColor: "orange",
       },
   
       context:
