@@ -1,15 +1,1 @@
-#root {
-  display: flex;
-  flex-direction: column;
-  /* max-width: 1280px; */
-  margin: 0 auto;
-  /* padding: 2rem; */
-  text-align: center;
-  min-height: 100dvh;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100dvw;
-}
+/* App-level resets — component styles live in their own CSS files */
