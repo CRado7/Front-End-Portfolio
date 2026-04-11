@@ -12,31 +12,31 @@ export default function ProjectGrid() {
 
   const projectFromSlug = useMemo(() => {
     if (!slug) return null;
-    return projects.find(project => project.slug === slug) || null;
+    return projects.find((p) => p.slug === slug) || null;
   }, [slug]);
 
   useEffect(() => {
-    if (projectFromSlug) {
-      setActiveProject(projectFromSlug);
-    } else {
-      setActiveProject(null);
-    }
+    setActiveProject(projectFromSlug ?? null);
   }, [projectFromSlug]);
 
-  const openProject = project => {
+  const openProject = (project) => {
     setActiveProject(project);
     navigate(`/projects/${project.slug}`);
   };
 
   const closeProject = () => {
     setActiveProject(null);
-    navigate(`/`);
+    navigate("/");
   };
 
   return (
     <div className="container">
+      <div className="projects-header">
+        <h3>Work</h3>
+      </div>
+
       <section className="project-grid">
-        {projects.map(project => (
+        {projects.map((project) => (
           <ProjectCard
             key={project.slug}
             project={project}
