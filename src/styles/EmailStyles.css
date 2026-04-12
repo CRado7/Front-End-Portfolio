@@ -333,13 +333,18 @@
 
 @media (max-width: 640px) {
   .email-modal-body {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    overflow: scroll;
   }
 
   .email-detail-panel {
     width: 100%;
     border-left: none;
     border-top: 1px solid #f0f0f0;
+  }
+
+  .email-images-panel {
+    overflow: visible;
   }
 
   .email-modal-header {

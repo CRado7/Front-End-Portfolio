@@ -43,6 +43,14 @@ nav a.active::after {
   border-radius: 2px;
 }
 
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+.nav-toggle {
+  display: none;
+}
+
 footer {
   width: 100%;
   display: flex;
@@ -73,8 +81,45 @@ footer a:hover {
     gap: 16px;
   }
 
-  nav {
-    gap: 16px;
-    padding: 16px 20px;
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 1.25rem;
+  }
+
+  button.nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #111;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
   }
 }
